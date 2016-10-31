@@ -13,8 +13,7 @@ CustomView customView;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		customView=(CustomView) findViewById(R.id.customView);
-		customView.setData(getData());
+	
 		
 	}
 	
@@ -25,7 +24,28 @@ CustomView customView;
 	//arrayList<hashMap>
 	public ArrayList<HashMap<String,String>> getData()
 	{
-	
+		ArrayList<HashMap<String,String>> list=new ArrayList();
+		HashMap<String,String> map1=new HashMap();
+		map1.put("time", "9");
+		map1.put("price", "3000");
+		list.add(map1);
+		
+		map1=new HashMap();
+		map1.put("time", "10");
+		map1.put("price", "4000");
+		list.add(map1);
+		
+		map1=new HashMap();
+		map1.put("time", "11");
+		map1.put("price", "5000");
+		list.add(map1);
+		
+		map1=new HashMap();
+		map1.put("time", "13");
+		map1.put("price", "4800");
+		list.add(map1);
+		
+		return list;
 	}
 
 	@Override
